@@ -17,15 +17,14 @@
 
         const root = document.getElementById("root");
 
-        const map = fetch('public/data.json')
-
-        console.log(map);
-
-        const Text_Area1 = "";
-        const Text_Area2 = "";
-        const Text_Area3 = "";
-        const Text_Area4 = "";
-
+        const map = fetch('/public/data.json')
+        .then(response => response.json())
+            .then(jsonData => {
+                const { Area1, Area2, Area3, Area4 } = jsonData;
+            })
+            .catch(error => {
+                console.error('데이터를 불러오는 중 오류가 발생했습니다.', error);
+            });
     </script>
 
 </html>
