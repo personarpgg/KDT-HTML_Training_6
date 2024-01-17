@@ -11,6 +11,7 @@
     <script>
         const root = document.getElementById("root");
 
+        //이거 쓰려면 정책 문제로 8080 써야함
         fetch('/public/data.json')
             .then(response => response.json())
             .then(data => {
