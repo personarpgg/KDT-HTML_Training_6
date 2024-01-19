@@ -12,4 +12,4 @@ function send() {
     .catch((error) => console.error("데이터 못 불러옴", error));
 }
 // 모듈로 내보내기
-module.exports = send();
+module.exports = send;
