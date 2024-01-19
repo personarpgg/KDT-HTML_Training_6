@@ -14,5 +14,3 @@ app.listen(port, () => {
   console.log(`http://localhost:3000/`);
 });
 
-// 모듈로 내보내기
-module.exports = { app };
