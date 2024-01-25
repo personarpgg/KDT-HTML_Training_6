@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Display JSON in HTML</title>
 </head>
 
 <body>
     <div id="root"></div>
+    <script>
+        // JSON 데이터를 불러와서 HTML에 표시하는 코드
 
-    <script type="module" src="/public/module.js">
-        const root = document.getElementById("root");
-
-        send();
+        // data.json 파일을 불러오기
+        fetch('/data.json')
+            .then(response => response.json())  // JSON 형태로 변환
+            .then(data => {})
+            .catch(error => console.error('데이터를 불러오는 중 에러 발생:', error));
     </script>
-
 </body>
 
 </html>
