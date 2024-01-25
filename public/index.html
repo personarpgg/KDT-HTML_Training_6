@@ -16,18 +16,23 @@
         fetch('/data.json')
             .then(response => response.json())  // JSON 형태로 변환
             .then(data => {
-            
-            // id가 'root'인 div 요소를 찾기
-            const rootElement = document.getElementById('root');
-            
-            
-            
-            
+
+                // id가 'root'인 div 요소를 찾기
+                const rootElement = document.getElementById('root');
+
+                data.forEach(Data => { //data.json 데이터의 각 배열을 조회하여 p 태그에 집어넣는 과정
+                    const DataElement = document.createElement('p');//p 만들어서 root에 넣음
+                    DataElement.textContent = Data.content; //여기서 내용 들어감
+                    rootElement.appendChild(DataElement); // 만든 p를 root의 종속시킴
+                    //결국 root 안에 p단위로 생성하여 내용을 넣음
+                });
+
+
             }) //불러온 데이터가 있는 확인
             .catch(error => console.error('데이터를 불러오는 중 에러 발생:', error));
 
 
-            
+
     </script>
 </body>
 
