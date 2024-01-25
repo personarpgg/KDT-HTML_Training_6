@@ -15,7 +15,7 @@
         // data.json 파일을 불러오기
         fetch('/data.json')
             .then(response => response.json())  // JSON 형태로 변환
-            .then(data => {})
+            .then(data => {console.log("데이터 잘 불러온듯?")}) //불러온 데이터가 있는 확인
             .catch(error => console.error('데이터를 불러오는 중 에러 발생:', error));
     </script>
 </body>
